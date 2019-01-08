@@ -8,7 +8,6 @@ files = sorted(glob2.glob('*.txt'))
 with open(f'{now_string}.txt', 'a+') as my_text_file:
     for file in files:
         with open(file) as individual_file:
-            content = individual_file.read()
-            my_text_file.write(content + '\n')
+            my_text_file.write(individual_file.read() + '\n')
 
 
